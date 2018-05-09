@@ -1,0 +1,25 @@
+{
+    "explorer.openEditors.visible": 0,
+    "workbench.colorTheme": "Solarized Dark",
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.dragAndDrop": false,
+    "editor.rulers": [
+        80
+    ],
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.colorDecorators": false,
+    "extensions.ignoreRecommendations": true,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 1,
+    "material-icon-theme.showUpdateMessage": false,
+    "explorer.autoReveal": false,
+    "markdown.preview.fontFamily": "Roboto",
+    "html.format.unformatted": null,
+    "editor.selectionClipboard": false,
+    "explorer.confirmDelete": false,
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+}
