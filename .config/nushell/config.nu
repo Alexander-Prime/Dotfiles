@@ -756,15 +756,7 @@ $env.config = {
     ]
 }
 
-$env.PATH = ($env.PATH | append [
-  '/usr/local/bin'
-  '~/.deno/bin'
-])
-
-source '~/.config/nushell/oh-my-posh.nu'
-
-alias B = brew install
-
-alias dc = docker-compose
-alias dce = dc exec
-alias dcr = dc restart
+source ~/.config/nushell/oh-my-posh.nu
+source ~/.config/alias/apt.nu
+source ~/.config/alias/brew.nu
+source ~/.config/alias/docker-compose.nu
