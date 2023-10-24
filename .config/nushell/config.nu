@@ -550,13 +550,12 @@ let-env config = {
   ]
 }
 
-let-env PATH = ($env.PATH
-  | append /usr/local/bin
-  | append '~/.deno/bin'
-)
+let-env PATH = ($env.PATH | append [
+  '/usr/local/bin'
+  '~/.deno/bin'
+])
 
-source '~/Library/Application Support/nushell/oh-my-posh.nu'
-# source '~/.nu-defs/aws'
+source '~/.config/nushell/oh-my-posh.nu'
 
 alias B = brew install
 
