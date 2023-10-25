@@ -105,5 +105,6 @@ $env.EDITOR = hx
 $env.PATH = ($env.PATH | append [
     "/usr/local/bin",
     "~/.deno/bin",
-    "~.cargo/bin"
+    "~/.cargo/bin",
+    "~/.local/bin"
 ])
