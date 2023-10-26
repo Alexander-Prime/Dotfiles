@@ -1,8 +1,12 @@
+theme = "base16_default_dark"
+
 [editor]
-true-color = true
-bufferline = "multiple"
-rulers = [80, 120]
+bufferline = "always"
+line-number = "relative"
 mouse = false
+rulers = [80, 120]
+shell = ["nu"]
+true-color = true
 
 [editor.lsp]
 display-messages = true
@@ -23,3 +27,20 @@ hidden = false
 "A-." = "goto_next_buffer"
 "A-w" = ":buffer-close"
 "A-/" = "repeat_last_motion"
+
+"A-x" = "extend_to_line_bounds"
+"X" = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.select]
+"A-x" = "extend_to_line_bounds"
+"X" = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.insert]
+up       = "no_op"
+down     = "no_op"
+left     = "no_op"
+right    = "no_op"
+pageup   = "no_op"
+pagedown = "no_op"
+home     = "no_op"
+end      = "no_op"
