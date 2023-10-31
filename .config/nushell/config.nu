@@ -760,3 +760,4 @@ source ~/.config/nushell/oh-my-posh.nu
 source ~/.config/alias/apt.nu
 source ~/.config/alias/brew.nu
 source ~/.config/alias/docker-compose.nu
+source ~/.config/alias/zellij.nu
