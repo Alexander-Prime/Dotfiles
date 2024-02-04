@@ -1,0 +1,6 @@
+[user]
+name = "Alexander Peters"
+email = "boringidiot@proton.me"
+
+[ui]
+default-command = "log"
