@@ -25,8 +25,10 @@ hs.hotkey.bind({}, 0x6e, function ()
 		scrFrame = screen.mainScreen():frame()
 		print(winFrame)
 		print(scrFrame)
-		winFrame.w = scrFrame.w * width_factor
-		winFrame.h = scrFrame.h * height_factor
+		-- winFrame.w = scrFrame.w * width_factor
+		-- winFrame.h = scrFrame.h * height_factor
+		winFrame.w = 1646
+		winFrame.h = 617
 		winFrame.x = scrFrame.x + (scrFrame.w / 2) - (winFrame.w / 2)
 		winFrame.y = scrFrame.y
 		print(winFrame)
