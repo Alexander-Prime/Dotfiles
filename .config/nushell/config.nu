@@ -757,6 +757,7 @@ $env.config = {
 }
 
 source ~/.config/nushell/oh-my-posh.nu
+source ~/.config/nushell/completions-jj.nu
 source ~/.config/alias/apt.nu
 source ~/.config/alias/brew.nu
 source ~/.config/alias/docker-compose.nu
