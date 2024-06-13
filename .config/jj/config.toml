@@ -4,3 +4,6 @@ email = "boringidiot@proton.me"
 
 [ui]
 default-command = "log"
+
+[revsets]
+log = "@ | (trunk()..mine()) | trunk()"
