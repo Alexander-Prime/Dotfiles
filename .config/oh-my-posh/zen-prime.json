@@ -11,9 +11,12 @@
       "segments": [
         {
           "type": "path",
-          "style": "plain",
-          "foreground": "lightBlue",
-          "template": "<b>󰉋 {{ path .Path .Location }} </b>",
+          "style": "diamond",
+          "leading_diamond": "█",
+          "trailing_diamond": " ",
+          "foreground": "lightWhite",
+          "background": "blue",
+          "template": "<b>󰉋 {{ path .Path .Location }}</b>",
           "properties": {
             "style": "full"
           }
@@ -68,7 +71,7 @@
   ],
   "transient_prompt": {
     "template": "❯ "
-  },
+    },
   "secondary_prompt": {
     "template": "❯❯ "
   }
