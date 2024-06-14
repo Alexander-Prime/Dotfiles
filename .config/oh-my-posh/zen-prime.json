@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "lightBlue",
+          "template": "<b>󰉋 {{ path .Path .Location }} </b>",
+          "properties": {
+            "style": "full"
+          }
+        },
+        {
+          "type": "command",
+          "style": "plain",
+          "foreground": "white",
+          "template": "~",
+          "properties": {
+            "command": "jj log -r @--"
+          }
+        },
+        {
+          "type": "command",
+          "style": "plain",
+          "foreground": "magenta",
+          "template": "<white>◉</>{{ .Output }}<white>-</>",
+          "properties": {
+            "command": "jj log -r @- -T 'change_id.shortest()' --color=never --no-graph"
+          }
+        },
+        {
+          "type": "command",
+          "style": "plain",
+          "foreground": "lightMagenta",
+          "template": "<b><lightWhite>@</>{{ .Output }}</b>",
+          "properties": {
+            "command": "jj log -r @ -T 'change_id.shortest()' --color=never --no-graph"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "status",
+          "template": "<b>❯</b>",
+          "foreground": "lightBlue",
+          "foreground_templates": [
+            "{{ if .Error }}red{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          }
+        }
+      ]
+    }
+  ],
+  "transient_prompt": {
+    "template": "❯ "
+  },
+  "secondary_prompt": {
+    "template": "❯❯ "
+  }
+}

@@ -108,3 +108,5 @@ $env.PATH = ($env.PATH | append [
     "~/.cargo/bin",
     "~/.local/bin"
 ])
+
+oh-my-posh init nu --config ~/.config/oh-my-posh/zen-prime.json
