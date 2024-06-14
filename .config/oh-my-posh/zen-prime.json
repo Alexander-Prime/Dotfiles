@@ -70,7 +70,7 @@
     }
   ],
   "transient_prompt": {
-    "template": "❯ "
+    "template": "\n❯ "
     },
   "secondary_prompt": {
     "template": "❯❯ "
