@@ -791,3 +791,5 @@ source ~/.config/alias/hx.nu
 source ~/.config/alias/zellij.nu
 
 source ~/.oh-my-posh.nu
+
+source ~/.cache/zoxide.nu
