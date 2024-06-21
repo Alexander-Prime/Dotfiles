@@ -1,0 +1,5 @@
+pane_frames false
+default_layout "compact"
+mouse_mode false
+copy_command "wl-copy"
+copy_on_select false
