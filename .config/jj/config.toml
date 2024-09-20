@@ -4,6 +4,7 @@ email = "boringidiot@proton.me"
 
 [ui]
 default-command = "log"
+movement.edit = true
 
 [revsets]
 log = "@ | (trunk()..mine()) | trunk()"
