@@ -260,7 +260,22 @@ $env.config = {
     use_kitty_protocol: false # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this
 
     hooks: {
-        pre_prompt: [{ null }] # run before the prompt is shown
+        pre_prompt: [{ ||
+            if (which direnv | is-empty) {
+                return
+            }
+
+            # Ensure nix-shell temporary directory exists
+            # This fixes an issue where nix-shell fails to create its temp dir in nushell
+            if 'TMPDIR' in $env and ($env.TMPDIR | into string | str starts-with "/tmp/nix-shell-") {
+                mkdir $env.TMPDIR
+            }
+
+            direnv export json | from json | default {} | load-env
+            if 'ENV_CONVERSIONS' in $env and 'PATH' in $env.ENV_CONVERSIONS {
+                $env.PATH = do $env.ENV_CONVERSIONS.PATH.from_string $env.PATH
+            }
+        }]
         pre_execution: [{ null }] # run before the repl input is run
         env_change: {
             PWD: [{|before, after| null }] # run if the PWD environment is different since the last repl input
