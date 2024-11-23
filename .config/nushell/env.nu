@@ -113,3 +113,6 @@ oh-my-posh init nu --config ~/.config/oh-my-posh/zen-prime.json
 zoxide init --cmd cd nushell | save -f ~/.cache/zoxide.nu
 
 $env.PAGER = "less -FRX"
+
+$env.UID = (id -u)
+$env.GID = (id -g)
